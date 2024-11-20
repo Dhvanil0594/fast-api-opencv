@@ -49,13 +49,11 @@ cd fast-api-opencv
 2\. Set up a virtual environment and install dependencies:
 
 ```
-
 python3 -m venv venv
 
 source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
 pip install -r requirements.txt
-
 ```
 
 3\. Install PostgreSQL and set up your database:
@@ -73,14 +71,14 @@ alembic upgrade head
 ```
 
 - optional:
-    * If you need to recreate the database, you can run the following command:
+* If you need to recreate the database, you can run the following command:
 
 ```
 alembic downgrade base
 ```
-- You can also use `alembic downgrade head` to roll back to the latest version.
+* You can also use `alembic downgrade head` to roll back to the latest version.
 
-- If you want to update the database, you can use following command:
+* If you want to update the database, you can use following command:
 ```
 alembic revision --autogenerate -m "update database"
 ```
