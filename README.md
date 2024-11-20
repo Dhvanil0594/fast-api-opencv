@@ -70,7 +70,7 @@ pip install -r requirements.txt
 alembic upgrade head
 ```
 
-** optional:
+* optional:
 * If you need to recreate the database, you can run the following command:
 
 ```
@@ -106,7 +106,6 @@ Register a new employee by providing their details: `name`, `position`, `email`,
 #### Request:
 
 ```
-
 curl -X 'POST'
 
   'http://0.0.0.0:8001/api/v1/employee-auth/register'
@@ -126,7 +125,6 @@ curl -X 'POST'
   "password": "password"
 
 }'
-
 ```
 
 #### Response:
@@ -148,7 +146,6 @@ After registration, employees need to upload a photo for facial recognition. Thi
 #### Request:
 
 ```
-
 curl --location 'http://0.0.0.0:8001/api/v1/employee-auth/upload_image/5'
 
 --form 'file=@"/path/to/photo.jpg"'
@@ -158,13 +155,11 @@ curl --location 'http://0.0.0.0:8001/api/v1/employee-auth/upload_image/5'
 #### Response:
 
 ```
-
 {
 
   "message": "Image uploaded and face registered successfully"
 
 }
-
 ```
 
 ---
@@ -176,27 +171,19 @@ Employees can mark their attendance by uploading a photo for face recognition. T
 #### Request:
 
 ```
-
 curl --location 'http://0.0.0.0:8001/api/v1/employee-detection/upload_image'
 
 --form 'file=@"/path/to/image.jpg"'
-
 ```
 
 #### Response:
 
 ```
-
 {
-
   "message": "Attendance marked successfully",
-
   "employee_id": 5
-
 }
-
 ```
-
 ---
 
 ## DeepFace Face Recognition Integration
@@ -204,17 +191,12 @@ curl --location 'http://0.0.0.0:8001/api/v1/employee-detection/upload_image'
 DeepFace is used to match the uploaded photo against the stored images. The following code snippet shows how DeepFace is used to perform the face recognition:
 
 ```
-
 from deepface import DeepFace
 
 dfs = DeepFace.find(
-
     img_path = "img1.jpg",  # The image to match
-
     db_path = "path/to/database",  # The directory where the images are stored
-
 )
-
 ```
 
 The system uses this `find` function to search for the closest match in the database and returns the corresponding employee's ID for attendance marking.
@@ -250,9 +232,7 @@ The project uses PostgreSQL to store employee data and uploaded images. The data
 2\. **Run the FastAPI app**:
 
 ```
-
 uvicorn main:app --reload
-
 ```
 
 3\. **Access the app** at `http://0.0.0.0:8001` or your configured server URL.
