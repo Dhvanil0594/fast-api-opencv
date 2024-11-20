@@ -44,7 +44,6 @@ Before you get started, ensure the following tools and frameworks are installed:
 git clone https://github.com/Dhvanil0594/fast-api-opencv.git
 
 cd fast-api-opencv
-
 ```
 
 ### Step 2: Set Up Virtual Environment & Install Dependencies
@@ -55,7 +54,6 @@ python3 -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 
 pip install -r requirements.txt
-
 ```
 
 ### Step 3: Configure PostgreSQL Database
@@ -68,7 +66,6 @@ pip install -r requirements.txt
 
 ```
 alembic upgrade head
-
 ```
 
 **Optional Commands**:  
@@ -89,7 +86,6 @@ alembic upgrade head
 
 ```
 uvicorn main:app --reload
-
 ```
 
 ---
@@ -122,7 +118,6 @@ curl -X POST 'http://0.0.0.0:8001/api/v1/employee-auth/register'
   "password": "securepassword"
 
 }'
-
 ```
 
 #### Example Response:
@@ -133,7 +128,6 @@ curl -X POST 'http://0.0.0.0:8001/api/v1/employee-auth/register'
   "message": "Employee registered successfully"
 
 }
-
 ```
 
 ---
@@ -152,7 +146,6 @@ curl -X POST 'http://0.0.0.0:8001/api/v1/employee-auth/register'
 curl --location 'http://0.0.0.0:8001/api/v1/employee-auth/upload_image/5'
 
 --form 'file=@"/path/to/photo.jpg"'
-
 ```
 
 #### Example Response:
@@ -163,7 +156,6 @@ curl --location 'http://0.0.0.0:8001/api/v1/employee-auth/upload_image/5'
   "message": "Image uploaded and face registered successfully"
 
 }
-
 ```
 
 ---
@@ -178,12 +170,10 @@ curl --location 'http://0.0.0.0:8001/api/v1/employee-auth/upload_image/5'
 
 #### Example Request:
 
-```bash
-
+```
 curl --location 'http://0.0.0.0:8001/api/v1/employee-detection/upload_image'
 
 --form 'file=@"/path/to/image.jpg"'
-
 ```
 
 #### Example Response:
@@ -196,7 +186,6 @@ curl --location 'http://0.0.0.0:8001/api/v1/employee-detection/upload_image'
   "employee_id": 5
 
 }
-
 ```
 
 ---
@@ -215,7 +204,6 @@ results = DeepFace.find(
     db_path="path/to/database"  # Directory containing stored images
 
 )
-
 ```
 
 ---
