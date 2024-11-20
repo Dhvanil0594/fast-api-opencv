@@ -48,15 +48,15 @@ cd fast-api-opencv
 
 2\. Set up a virtual environment and install dependencies:
 
-    ```
+```
 
-    python3 -m venv venv
+python3 -m venv venv
 
-    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
-    pip install -r requirements.txt
+pip install -r requirements.txt
 
-    ```
+```
 
 3\. Install PostgreSQL and set up your database:
 
@@ -70,23 +70,23 @@ cd fast-api-opencv
 
     - To initialize the database schema, run the following command (make sure you’ve configured `alembic.ini` to match your database settings):
 
-    ```
-    alembic upgrade head
-    ```
+```
+alembic upgrade head
+```
 
     - optional:
     * If you need to recreate the database, you can run the following command:
 
-    ```
-    alembic downgrade base
-    ```
+```
+alembic downgrade base
+```
 
     * You can also use `alembic downgrade head` to roll back to the latest version.
 
     * If you want to update the database, you can use following command:
-    ```
-    alembic revision --autogenerate -m "update database"
-    ```
+```
+alembic revision --autogenerate -m "update database"
+```
 
 4\. Set up the DeepFace model:
 
@@ -96,11 +96,11 @@ cd fast-api-opencv
 
 5\. Run the FastAPI app:
 
-    ```
+```
 
-    uvicorn main:app --reload
+uvicorn main:app --reload
 
-    ```
+```
 
 ## API Endpoints
 
@@ -136,7 +136,7 @@ curl -X 'POST'
 
 #### Response:
 
-```json
+```
 
 {
 
@@ -164,7 +164,7 @@ curl --location 'http://0.0.0.0:8001/api/v1/employee-auth/upload_image/5'
 
 #### Response:
 
-```json
+```
 
 {
 
@@ -192,7 +192,7 @@ curl --location 'http://0.0.0.0:8001/api/v1/employee-detection/upload_image'
 
 #### Response:
 
-```json
+```
 
 {
 
@@ -210,7 +210,7 @@ curl --location 'http://0.0.0.0:8001/api/v1/employee-detection/upload_image'
 
 DeepFace is used to match the uploaded photo against the stored images. The following code snippet shows how DeepFace is used to perform the face recognition:
 
-```python
+```
 
 from deepface import DeepFace
 
@@ -256,11 +256,11 @@ The project uses PostgreSQL to store employee data and uploaded images. The data
 
 2\. **Run the FastAPI app**:
 
-    ```
+```
 
-    uvicorn main:app --reload
+uvicorn main:app --reload
 
-    ```
+```
 
 3\. **Access the app** at `http://0.0.0.0:8001` or your configured server URL.
 
