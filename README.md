@@ -70,7 +70,7 @@ pip install -r requirements.txt
 alembic upgrade head
 ```
 
-- optional:
+** optional:
 * If you need to recreate the database, you can run the following command:
 
 ```
