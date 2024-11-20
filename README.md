@@ -40,11 +40,11 @@ This project is an Employee Attendance System built using **FastAPI** and **Post
 
 1\. Clone the repository:
 
-    ```
-    git clone https://github.com/Dhvanil0594/fast-api-opencv.git
-    
-    cd fast-api-opencv
-    ```
+```
+git clone https://github.com/Dhvanil0594/fast-api-opencv.git
+
+cd fast-api-opencv
+```
 
 2\. Set up a virtual environment and install dependencies:
 
