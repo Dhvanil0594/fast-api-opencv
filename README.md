@@ -42,6 +42,7 @@ This project is an Employee Attendance System built using **FastAPI** and **Post
 
     ```
     git clone https://github.com/Dhvanil0594/fast-api-opencv.git
+    
     cd fast-api-opencv
     ```
 
