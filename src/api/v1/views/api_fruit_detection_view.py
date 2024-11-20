@@ -1,6 +1,6 @@
 from fastapi import APIRouter, File, UploadFile
 from fastapi.responses import JSONResponse
-from src.api.v1.services import detect_services as _DS
+from ..services import detect_services as _DS
 from config.config import settings
 from io import BytesIO
 from PIL import Image

@@ -8,6 +8,7 @@ class EmployeeCreate(BaseModel):
     password: str
 
 class UserResponse(BaseModel):
+    id: int
     name: str
     position: str
     email: EmailStr

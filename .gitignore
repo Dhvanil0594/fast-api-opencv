@@ -1,3 +1,9 @@
 *.pyc
 __pycache__/
 src/api/v1/constants/fruits_model.keras
+ds_model_vggface_detector_opencv_aligned_normalization_base_expand_0.pkl
+app.log
+test.py
+employee_images/2_img1.jpg
+employee_images/5_Salman_Khan_1.jpg
+employee_images/ds_model_facenet512_detector_opencv_aligned_normalization_base_expand_0.pkl
