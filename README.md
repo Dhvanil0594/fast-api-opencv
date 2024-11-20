@@ -40,7 +40,7 @@ This project is an Employee Attendance System built using **FastAPI** and **Post
 
 1\. Clone the repository:
 
-    ```bash
+    ```
 
     git clone https://github.com/Dhvanil0594/fast-api-opencv.git
 
@@ -50,7 +50,7 @@ This project is an Employee Attendance System built using **FastAPI** and **Post
 
 2\. Set up a virtual environment and install dependencies:
 
-    ```bash
+    ```
 
     python3 -m venv venv
 
@@ -72,21 +72,21 @@ This project is an Employee Attendance System built using **FastAPI** and **Post
 
     - To initialize the database schema, run the following command (make sure you’ve configured `alembic.ini` to match your database settings):
 
-    ```bash
+    ```
     alembic upgrade head
     ```
 
     - optional:
     * If you need to recreate the database, you can run the following command:
 
-    ```bash
+    ```
     alembic downgrade base
     ```
 
     * You can also use `alembic downgrade head` to roll back to the latest version.
 
     * If you want to update the database, you can use following command:
-    ```bash
+    ```
     alembic revision --autogenerate -m "update database"
     ```
 
@@ -98,7 +98,7 @@ This project is an Employee Attendance System built using **FastAPI** and **Post
 
 5\. Run the FastAPI app:
 
-    ```bash
+    ```
 
     uvicorn main:app --reload
 
@@ -112,7 +112,7 @@ Register a new employee by providing their details: `name`, `position`, `email`,
 
 #### Request:
 
-```bash
+```
 
 curl -X 'POST'
 
@@ -156,7 +156,7 @@ After registration, employees need to upload a photo for facial recognition. Thi
 
 #### Request:
 
-```bash
+```
 
 curl --location 'http://0.0.0.0:8001/api/v1/employee-auth/upload_image/5'
 
@@ -184,7 +184,7 @@ Employees can mark their attendance by uploading a photo for face recognition. T
 
 #### Request:
 
-```bash
+```
 
 curl --location 'http://0.0.0.0:8001/api/v1/employee-detection/upload_image'
 
@@ -258,7 +258,7 @@ The project uses PostgreSQL to store employee data and uploaded images. The data
 
 2\. **Run the FastAPI app**:
 
-    ```bash
+    ```
 
     uvicorn main:app --reload
 
