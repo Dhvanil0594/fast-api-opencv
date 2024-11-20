@@ -64,37 +64,34 @@ pip install -r requirements.txt
 
     - Update the database URL in the environment configuration or `config.py`.
 
-4\. Set Up the Database
-
+4\. Set Up the Database: 
     - You may need to set up the database (MySQL or SQLite, depending on your configuration). You can use Alembic to handle database migrations.
-
-    - To initialize the database schema, run the following command (make sure you’ve configured `alembic.ini` to match your database settings):
+    - To initialize the database schema, run the following command (make sure you’ve configured `alembic.ini` to match your database settings).
 
 ```
 alembic upgrade head
 ```
 
-    - optional:
+- optional:
     * If you need to recreate the database, you can run the following command:
 
 ```
 alembic downgrade base
 ```
+- You can also use `alembic downgrade head` to roll back to the latest version.
 
-    * You can also use `alembic downgrade head` to roll back to the latest version.
-
-    * If you want to update the database, you can use following command:
+- If you want to update the database, you can use following command:
 ```
 alembic revision --autogenerate -m "update database"
 ```
 
-4\. Set up the DeepFace model:
+5\. Set up the DeepFace model:
 
     - DeepFace will automatically download the pre-trained models needed for facial recognition.
 
     - You need to provide a directory path for saving facial data in `db_path`.
 
-5\. Run the FastAPI app:
+6\. Run the FastAPI app:
 
 ```
 
@@ -137,13 +134,11 @@ curl -X 'POST'
 #### Response:
 
 ```
-
 {
 
   "message": "Employee registered successfully"
 
 }
-
 ```
 
 ---
