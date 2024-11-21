@@ -14,3 +14,4 @@ employee_images/ds_model_facenet512_detector_opencv_aligned_normalization_base_e
 
 # Ignore .env file
 .env
+app.log
