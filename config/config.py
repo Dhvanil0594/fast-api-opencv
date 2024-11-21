@@ -16,6 +16,7 @@ class Settings(BaseSettings):
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 500
     ALGORITHM: str
     UPLOAD_FOLDER: str
+    PORT: int
 
 
 settings = Settings()
